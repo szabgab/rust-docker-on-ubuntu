@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 #  release:
 #    types: [published]
-#  schedule:
-#    - cron: '42 6 * * *'
+  schedule:
+    - cron: '42 6 * * *'
 
 
 jobs:
