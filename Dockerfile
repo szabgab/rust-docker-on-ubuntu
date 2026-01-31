@@ -7,6 +7,7 @@ RUN apt update                              && \
     apt install -y pkg-config               && \
     apt install -y libssl-dev               && \
     apt install -y curl                     && \
+    apt install -y vim                      && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
