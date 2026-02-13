@@ -8,6 +8,12 @@ RUN apt update                              && \
     apt install -y libssl-dev               && \
     apt install -y curl                     && \
     apt install -y vim                      && \
+    echo for zed                            && \
+    apt install -y x11-apps                 && \
+    apt install -y libasound2               && \
+    apt install -y libxkbcommon-tools       && \
+    apt install -y libvulkan1               && \
+    apt install -y rsync                    && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
