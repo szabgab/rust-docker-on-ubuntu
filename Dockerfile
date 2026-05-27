@@ -30,6 +30,10 @@ RUN echo Install crates             && \
     echo done
 
 
+RUN echo Install Antigravity   && \
+    curl -fsSL https://antigravity.google/cli/install.sh | bash  && \
+    echo done
+
 COPY bashrc /home/ubuntu/.bashrc
 USER root
 RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc

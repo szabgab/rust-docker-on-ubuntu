@@ -118,3 +118,5 @@ fi
 
 . "$HOME/.cargo/env"
 
+export PATH="/home/ubuntu/.local/bin:$PATH"
+
