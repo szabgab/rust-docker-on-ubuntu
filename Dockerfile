@@ -14,6 +14,7 @@ RUN apt update                              && \
     apt install -y libxkbcommon-tools       && \
     apt install -y libvulkan1               && \
     apt install -y rsync                    && \
+    apt install -y git                      && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
@@ -28,7 +29,6 @@ RUN sh install.sh -y && \
 RUN echo Install crates             && \
     /home/ubuntu/.cargo/bin/cargo install cargo-tarpaulin   && \
     echo done
-
 
 RUN echo Install Antigravity   && \
     curl -fsSL https://antigravity.google/cli/install.sh | bash  && \
