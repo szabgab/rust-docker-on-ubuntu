@@ -35,7 +35,7 @@ RUN echo Install Antigravity   && \
     echo done
 
 RUN echo Install GitHub co-pilot CLI   && \
-    curl -fsSL https://gh.io/copilot-install | bash
+    curl -fsSL https://gh.io/copilot-install | bash  && \
     echo done
 
 COPY bashrc /home/ubuntu/.bashrc
