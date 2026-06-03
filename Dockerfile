@@ -15,6 +15,7 @@ RUN apt update                              && \
     apt install -y libvulkan1               && \
     apt install -y rsync                    && \
     apt install -y git                      && \
+    apt install -y gawk                     && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
@@ -28,6 +29,11 @@ RUN sh install.sh -y && \
 
 RUN echo Install crates             && \
     /home/ubuntu/.cargo/bin/cargo install cargo-tarpaulin   && \
+    echo done
+
+# gawk was needed due to a bug
+RUN echo Install Codex   && \
+    curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 sh && \
     echo done
 
 RUN echo Install gh   && \
