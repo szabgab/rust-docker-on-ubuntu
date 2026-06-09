@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:26.04
 RUN apt update                              && \
     apt -y upgrade                          && \
     # Some crates need cc so we install build-essential
@@ -20,7 +20,7 @@ RUN apt update                              && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
-RUN adduser --disabled-password --gecos "" ubuntu
+# RUN adduser --disabled-password --gecos "" ubuntu
 
 WORKDIR /home/ubuntu
 USER ubuntu
