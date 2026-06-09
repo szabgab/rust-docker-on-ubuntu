@@ -10,7 +10,6 @@ RUN apt update                              && \
     apt install -y vim                      && \
     echo for zed                            && \
     apt install -y x11-apps                 && \
-    apt install -y libasound2               && \
     apt install -y libxkbcommon-tools       && \
     apt install -y libvulkan1               && \
     apt install -y rsync                    && \
