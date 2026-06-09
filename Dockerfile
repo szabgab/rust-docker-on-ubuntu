@@ -34,8 +34,13 @@ RUN echo Install crates             && \
 
 # gawk was needed due to a bug
 # codex asked for bubblewrap to be installed.
+# Try to make sure the codex installation is inside the image
+# while allowing the user to put the auth.json and session data on the host volume.
 RUN echo Install Codex   && \
     curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 sh && \
+    mv ~/.codex ~/installed-codex && \
+    rm -f .local/bin/codex        && \
+    ln -s /home/ubuntu/installed-codex/packages/standalone/releases/$(ls -1 /home/ubuntu/installed-codex/packages/standalone/releases/)/bin/codex .local/bin/codex && \
     echo done
 
 RUN echo Install Antigravity   && \
