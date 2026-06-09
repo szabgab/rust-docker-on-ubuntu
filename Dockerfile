@@ -16,6 +16,7 @@ RUN apt update                              && \
     apt install -y rsync                    && \
     apt install -y git                      && \
     apt install -y gawk                     && \
+    apt install -y bubblewrap               && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
@@ -32,6 +33,7 @@ RUN echo Install crates             && \
     echo done
 
 # gawk was needed due to a bug
+# codex asked for bubblewrap to be installed.
 RUN echo Install Codex   && \
     curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 sh && \
     echo done

@@ -119,4 +119,8 @@ fi
 . "$HOME/.cargo/env"
 
 export PATH="/home/ubuntu/.local/bin:$PATH"
+alias codx="codex --ask-for-approval never"
+alias cop="copilot --yolo"
+
+
 
