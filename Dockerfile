@@ -16,6 +16,7 @@ RUN apt update                              && \
     apt install -y git                      && \
     apt install -y gawk                     && \
     apt install -y bubblewrap               && \
+    apt install -y unzip                    && \
     echo done
 
 # Needed for Ubuntu 22.04 but already exists on 25.10
