@@ -30,6 +30,7 @@ RUN sh install.sh -y && \
 
 RUN echo Install crates             && \
     /home/ubuntu/.cargo/bin/cargo install cargo-tarpaulin   && \
+    /home/ubuntu/.cargo/bin/cargo install cargo-mutants     && \
     echo done
 
 # gawk was needed due to a bug
